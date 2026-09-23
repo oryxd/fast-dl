@@ -1,0 +1,55 @@
+VertexLitGeneric
+{
+$baseTexture "models\ghostsynth\backrooms2026_still_life\face"
+$bumpmap "models\ghostsynth\backrooms2026_still_life\face_normal"
+$phongexponenttexture "models\survivors\coach\coach_head_exp"
+$phong 1
+$phongboost .5
+$phongtint "[.85 .85 1]"
+$phongfresnelranges "[.2 .5 5]"
+$nodecal 1
+$halflambert 0
+$diffuseexp "1.5"
+$lightwarptexture "models\survivors\coach\coach_head_wrp"
+$ambientocclusion 1
+$detail "effects\burned"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001
+$detailblendmode 2
+$bbqamount 1
+$BurnLevel 0.0
+$multi 3.0
+$blendMin 0.0
+$blendMax 1.2
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $BurnLevel
+srcVar2 $multi
+resultVar $BurnLevel
+}
+Clamp
+{
+min $blendMin
+max $blendMax
+srcVar1 $BurnLevel
+resultVar $BurnLevel
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}

@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+$baseTexture "models\ghostsynth\backrooms2026_still_life\eyes"
+$bumpmap "models\ghostsynth\backrooms2026_still_life\eyes"
+$normalmapalphaenvmapmask 1
+$envmap "env_cubemap"
+$envmaptint "[.4 .3 .3]"
+$lightwarptexture "models\survivors\coach\coach_head_wrp"
+$phong 1
+$phongexponent 5
+$phongboost 2
+$phongtint "[1 0.5 0.5]"
+}
